@@ -116,7 +116,7 @@ impl SwitchMonitor {
             event
         };
         debug!("input event received: {:?}", event);
-        if event.event_type == 1 /*KEY*/ && event.code == 0x230/*KEY_ALS_TOGGLE*/ && event.value == 1
+        if event.event_type == 1 /*KEY*/ && event.code == 0xb3/*KEY_ALS_TOGGLE*/ && event.value == 1
         {
             self.state = match (self.state, self.is_max_brightness_mode_enabled) {
                 (State::Auto, _) => State::Off,
